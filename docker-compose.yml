@@ -26,7 +26,7 @@ services:
         depends_on:
            - cmdbuild_db
         ports:
-            - 80:8080
+            - 8080:8080
         restart: on-failure    
         volumes:
             - cmdbuild-tomcat:/usr/local/tomcat
