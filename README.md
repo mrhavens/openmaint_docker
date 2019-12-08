@@ -1,10 +1,11 @@
-# openmaint_docker
+#Install OpenMAINT and PostgreSQL docker containers
 
+## Update apt repository 
 ```
 sudo apt update
 ```
 
-# install docker
+## Install docker
 ```
 sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -14,13 +15,13 @@ apt-cache policy docker-ce
 sudo apt -y install docker-ce
 ```
 
-# install docker compose
+## Install docker compose
 ```
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-# install openmaint
+## Install openmaint
 ```
 git clone https://github.com/mrhavens/openmaint_docker.git
 cd openmaint_docker
