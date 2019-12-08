@@ -1,4 +1,4 @@
-#Install OpenMAINT and PostgreSQL docker containers
+# Install OpenMAINT and PostgreSQL docker containers
 
 ## Update apt repository 
 ```
