@@ -19,8 +19,8 @@ openmaint_docker was built and tested using the following Docker tools:
 
 - Docker-Compose version 1.21.2, build a133471
 - Docker version 19.03.5, build 633a0ea838
-- Docker Image: mrhavens/cmdbuild:app-3.1.1 (from Docker Hub)
-- Docker Image: mrhavens/cmdbuild:db-3.0 (from Docker Hub)
+- Customized Docker Image: mrhavens/cmdbuild:app-3.1.1 (from Docker Hub)
+- Customized Docker Image: mrhavens/cmdbuild:db-3.0 (from Docker Hub)
 
 # Installation Instructions for Ubuntu 18.04 LTS
 
