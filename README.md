@@ -23,7 +23,7 @@ CMDBuild is an open source asset management application that openMAINT is built 
 
 Yes, openMAINT 2.0 has its own offical build (https://sourceforge.net/projects/openmaint/files/2.0/). openmaint_docker is not an official release of openMAINT. As of 12/09/19, openMAINT's code and documentation appear to be far behind CMDBuild. It may have even depreciated in favor of builds like this one. Except for logo stylization and the database, the two are virtually identical. CMDBuild, however, has documentation that is up to date, and a codebase that is known to be working and well tested. openmaint_docker makes use of the latest version of CMDBuild, but has been enabled to support the openMAINT database, thereby making it a fully enabled version of openMAINT with an updated CMDBuild core code base.
 
-### Docker & Docker Compose
+### What is Docker & Docker Compose?
 
 Docker is a popular tool that makes it easy to create, deploy, and run applications using containers. Containers allow developers to package and ship an application with a full stack of dependencies it needs to run on any other system, regardless of any conflicting configurations that may be present. Docker Compose is a companion tool for creating and running multi-container docker applications.
 
