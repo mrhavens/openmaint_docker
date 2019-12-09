@@ -140,12 +140,12 @@ Next, use sed to change the old password to the new password.
 sed -i 's/password=\"'$OLD_PASSWORD'"/password=\"'$NEW_PASSWORD'\"/' /usr/local/tomcat/conf/tomcat-users.xml
 ```
 
-Now, exit the container.
+Next, exit the container.
 ```
 exit
 ```
 
-You should now be back at the host server. Now restart the Tomcat container for the changes to take effect.
+You should now be back at the host server. Finally, restart the Tomcat container for the changes to take effect.
 ```
 docker restart $CONTINER_ID
 ```
