@@ -145,7 +145,7 @@ Now, exit the container.
 exit
 ```
 
-You show now be back at the host server. Now restart the Tomcat container for the changes to take effect.
+You should now be back at the host server. Now restart the Tomcat container for the changes to take effect.
 ```
 docker restart $CONTINER_ID
 ```
