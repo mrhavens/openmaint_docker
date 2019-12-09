@@ -64,7 +64,7 @@ Build and bring up the database container.
 docker-compose up -d openmaint_db
 ```
 
-Wait for about a minute for the database to come online, then build and bring up the Tomcat container.
+Wait between three to five minutes for the database to come fully online, then build and bring up the Tomcat container.
 ```
 docker-compose up -d openmaint_app
 ```
