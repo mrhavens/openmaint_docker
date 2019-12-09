@@ -1,6 +1,10 @@
 # openmaint_docker
 
-OpenMaint is web based Property & Facility Management application that is fully open source. It is used for managing fixed and transferable physical assets such as buildings and furniture, along with related maintenance.
+### What is openMAINT?
+
+openMAINT is web based Property & Facility Management application that is fully open source. It is used for managing fixed and transferable physical assets such as buildings and furniture, along with related maintenance.
+
+### What stack does this distro of openMAINT use?
 
 This is a fully functional OpenMAINT 2.0 solution using docker containers that employs the following customized stack:
 
@@ -10,6 +14,10 @@ This is a fully functional OpenMAINT 2.0 solution using docker containers that e
 - OpenJDK version 1.8.0_212
 - PostgreSQL 10.7
 - Debian 9.9 (stretch)
+
+### What is CMDBuild?
+
+CMDBuild is an open source asset management application that OpenMAINT is built upon. Except for some differences in the database, they are virtually identical and share the same code base.
 
 ### Docker & Docker Compose
 
