@@ -61,6 +61,8 @@ Wait for about a minute for the database to come online, then build and bring up
 docker-compose start openmaint_app
 ```
 
+# Administration
+
 OpenMAINT defaults to the following URL:
 
 ```
