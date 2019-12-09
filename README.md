@@ -117,7 +117,7 @@ This is the prefered method. You only need to edit the password in the Tomcat co
 ### How do I change the Tomcat Admin Console password after deployment?
 Changing the Tomcat Admin Console password on a running system is somewhat more involved and requires editing the corresponding configuration file in Tomcat. Since Tomcat is inside a Docker container, this is done as follows:
  
-You may need to be logged in as root on your openMAINT server in order to access Docker. On the server, you will first need to find the the Docker container ID, and assign it to a system variable CONTAINER_ID:
+You may need to be logged in as root on your openMAINT server in order to access Docker. On the server, you will first need to find the the Docker container ID, and assign it to a new CONTAINER_ID system variable:
 ```
 CONTAINER_ID=`docker ps |grep cmdbuild:app-3.1.1 |cut -d" " -f1`
 ```
