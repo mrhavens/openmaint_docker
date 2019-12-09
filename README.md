@@ -2,14 +2,14 @@
 
 ### What is openMAINT?
 
-openMAINT is web based Property & Facility Management application that is fully open source. It is used for managing fixed and transferable physical assets such as buildings and furniture, along with related maintenance.
+openMAINT (https://www.openmaint.org/) is web based Property & Facility Management application that is fully open source. It is used for managing fixed and transferable physical assets such as buildings and furniture, along with related maintenance.
 
 ### What stack does this distro of openMAINT use?
 
-This is a fully functional OpenMAINT 2.0 solution using docker containers that employs the following customized stack:
+This is a fully functional openMAINT 2.0 solution using docker containers that employs the following customized stack:
 
 - CMDBuild 3.1.1 core
-- OpenMAINT 2.0 database dump
+- openMAINT 2.0 database dump
 - Tomcat 8.5.42
 - OpenJDK version 1.8.0_212
 - PostgreSQL 10.7
@@ -17,11 +17,11 @@ This is a fully functional OpenMAINT 2.0 solution using docker containers that e
 
 ### What is CMDBuild?
 
-CMDBuild is an open source asset management application that OpenMAINT is built upon. Except for some differences in the database, they are virtually identical and share the same code base.
+CMDBuild is an open source asset management application that openMAINT is built upon. Except for some differences in the database, they are virtually identical and share the same code base.
 
-### Doesn't OpenMAINT have their own build? Why use CMDBuild?
+### Doesn't openMAINT have their own build? Why use CMDBuild?
 
-Yes, OpenMAINT has its own offical build. This is not an official release of OpenMAINT. As of 12/09/19, OpenMAINT's code and documentation appear to be far behind CMDBuild. It may have even depreciated in favor of builds like this one. Except for logo stylization, the two are virtually identical. CMDBuild, however, has documentation that is up to date, and a codebase that is known to be working and well tested.
+Yes, openMAINT 2.0 has its own offical build (https://sourceforge.net/projects/openmaint/files/2.0/). openmaint_docker is not an official release of openMAINT. As of 12/09/19, openMAINT's code and documentation appear to be far behind CMDBuild. It may have even depreciated in favor of builds like this one. Except for logo stylization and the database, the two are virtually identical. CMDBuild, however, has documentation that is up to date, and a codebase that is known to be working and well tested.
 
 ### Docker & Docker Compose
 
@@ -75,12 +75,12 @@ docker-compose up -d openmaint_app
 
 # Administration
 
-OpenMAINT defaults to the following URL:
+openMAINT defaults to the following URL:
 
 ```
 http://<openmaint_ip-address>:8080/cmdbuild
 ```
-Where <openmaint_ip-address> is the IP address or fully qualified domain name of the server with OpenMAINT installed.
+Where <openmaint_ip-address> is the IP address or fully qualified domain name of the server with openMAINT installed.
 
 If your server is behind a firewall that doesn't have ports 8080 open, you can redirect all traffic through an ssh tunnel that targets your unrestricted localhost:
 
@@ -94,11 +94,11 @@ And then browse to the following URL:
 http://localhost:8080/cmdbuild
 ```
 
-Defaut admin credentials to log into OpenMAINT are:
+Defaut admin credentials to log into openMAINT are:
 
 ```
-OpenMAINT Admin Username: admin
-OpenMAINT Admin Password: admin
+openMAINT Admin Username: admin
+openMAINT Admin Password: admin
 ```
 
 Default admin credentials to log into Tomcat admin console are:
