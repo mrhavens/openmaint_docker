@@ -127,7 +127,7 @@ The resulting string of characters inside system variable CONTAINER_ID is the Do
 docker exec -it $CONTAINER_ID /bin/bash
 ```
 
-Next, set the old password and your desired new password to the following system variable names. For example:
+You are now inside the Tomcat Docker container. Next, set the old password and your desired new password to the following system variable names. For example:
 
 ```
 OLD_PASSWORD=password
