@@ -4,7 +4,7 @@
 
 openMAINT (https://www.openmaint.org/) is web based Property & Facility Management application that is fully open source. It is used for managing fixed and transferable physical assets such as buildings and furniture, along with related maintenance.
 
-### What stack does this distro of openMAINT use?
+### What stack does this distro of openMAINT 2.0 use?
 
 This is a fully functional openMAINT 2.0 solution using docker containers that employs the following customized stack:
 
