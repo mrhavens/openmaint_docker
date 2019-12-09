@@ -82,18 +82,15 @@ And then browse to the following URL:
 http://localhost:8080/cmdbuild
 ```
 
-Defaut admin credentials to log into OpenMAINT is:
+Defaut admin credentials to log into OpenMAINT are:
 
 ```
 OpenMAINT Admin Username: admin
 OpenMAINT Admin Password: admin
 ```
 
-Default admin credentials to log into Tomcat admin console is:
+Default admin credentials to log into Tomcat admin console are:
 ```
 Tomcat Admin Username: admin
 Tomcat Admin Password: password
 ```
-
-
-
