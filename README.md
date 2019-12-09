@@ -61,12 +61,12 @@ cd openmaint_docker
 
 Build and bring up the database container.
 ```
-docker-compose start openmaint_db
+docker-compose up -d openmaint_db
 ```
 
 Wait for about a minute for the database to come online, then build and bring up the Tomcat container.
 ```
-docker-compose start openmaint_app
+docker-compose up -d openmaint_app
 ```
 
 # Administration
