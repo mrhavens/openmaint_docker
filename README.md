@@ -45,9 +45,53 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-### Build OpenMaint & PostgreSQL Containers
+### Build Tomcat & PostgreSQL Containers
 ```
 git clone https://github.com/mrhavens/openmaint_docker.git
 cd openmaint_docker
-docker-compose up -d
 ```
+
+Build and bring up the database container.
+```
+docker-compose start openmaint_db
+```
+
+Wait for about a minute for the database to come online, then build and bring up the Tomcat container.
+```
+docker-compose start openmaint_app
+```
+
+OpenMAINT defaults to the following URL:
+
+```
+http://<openmaint_ip-address>:8080/cmdbuild
+```
+Where <openmaint_ip-address> is the IP address or fully qualified domain name of the server with OpenMAINT installed.
+
+If your server is behind a firewall that doesn't have ports 8080 open, you can redirect all traffic through an ssh tunnel that targets your unrestricted localhost:
+
+```
+ssh -L 8080:localhost:8080 root@<openmaint_ip-address>
+```
+
+And then browse to the following URL:
+
+```
+http://localhost:8080/cmdbuild
+```
+
+Defaut admin credentials to log into OpenMAINT is:
+
+```
+OpenMAINT Admin Username: admin
+OpenMAINT Admin Password: admin
+```
+
+Default admin credentials to log into Tomcat admin console is:
+```
+Tomcat Admin Username: admin
+Tomcat Admin Password: password
+```
+
+
+
