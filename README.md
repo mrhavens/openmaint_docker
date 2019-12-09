@@ -5,7 +5,7 @@ OpenMaint is web based Property & Facility Management application that is fully 
 This is a fully functional OpenMAINT 2.0 solution using docker containers that employs the following customized stack:
 
 - CMDBuild 3.1.1 core
-- OpenMAINT 2.0 database
+- OpenMAINT 2.0 database dump
 - Tomcat 8.5.42
 - OpenJDK version 1.8.0_212
 - PostgreSQL 10.7
