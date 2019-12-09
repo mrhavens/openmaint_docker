@@ -101,8 +101,49 @@ openMAINT Admin Username: admin
 openMAINT Admin Password: admin
 ```
 
+### Tomcat Admin Console
+
 Default admin credentials to log into Tomcat admin console are:
 ```
 Tomcat Admin Username: admin
 Tomcat Admin Password: password
+```
+
+### How do I change the Tomcat Admin Console password before deployment?
+This is the prefered method. You only need to edit the password in the Tomcat configuration file provided in in this distro (openmaint/files/tomcat-users.xml). However, it can only be changed prior to deployment.
+
+### How do I change the Tomcat Admin Console password after deployment?
+Changing the Tomcat Admin Console password on a running system is somewhat more involved and requires editing the corresponding configuration file in Tomcat. Since Tomcat is inside a Docker container, this is done as follows:
+ 
+You may need to be logged in as root on your openMAINT server in order to access Docker. On the server, you will first need to find the the Docker container ID, and assign it to a system variable CONTAINER_ID:
+```
+CONTAINER_ID=`docker ps |grep cmdbuild:app-3.1.1 |cut -d" " -f1`
+```
+
+The resulting string of characters inside system variable CONTAINER_ID is the Docker container ID for Tomcat. Next, log into the container:
+```
+docker exec -it $CONTAINER_ID /bin/bash
+```
+
+Next, set the old password and your desired new password to the following system variable names. For example:
+
+```
+OLD_PASSWORD=password
+NEW_PASSWORD=MyN3wPa$$wD!
+```
+
+Next, use sed to change the old password to the new password.
+
+```
+sed -i 's/password=\"'$OLD_PASSWORD'"/password=\"'$NEW_PASSWORD'\"/' /usr/local/tomcat/conf/tomcat-users.xml
+```
+
+Now, exit the container.
+```
+exit
+```
+
+You show now be back at the host server. Now restart the Tomcat container for the changes to take effect.
+```
+docker restart $CONTINER_ID
 ```
