@@ -11,9 +11,11 @@ This is a fully functional OpenMAINT 2.0 solution using docker containers that e
 - PostgreSQL 10.7
 - Debian 9.9 (stretch)
 
-### Docker Compose
+### Docker & Docker Compose
 
-openmaint_docker was built and tested using the following:
+Docker is a popular tool that makes it easy to create, deploy, and run applications using containers. Containers allow developers to package and ship an application with a full stack of dependencies it needs to run on any other system, regardless of any conflicting configurations that may be present. Docker Compose is a companion tool for creating and running multi-container docker applications.
+
+openmaint_docker was built and tested using the following Docker tools:
 
 - Docker-Compose version 1.21.2, build a133471
 - Docker version 19.03.5, build 633a0ea838
