@@ -1,4 +1,4 @@
-# Install openmaint_docker
+# openmaint_docker
 
 OpenMaint is web based Property & Facility Management application that is fully open source. It is used for managing fixed and transferable physical assets such as buildings and furniture, along with related maintenance.
 
