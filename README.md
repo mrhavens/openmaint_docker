@@ -11,14 +11,14 @@ This is a fully functional OpenMAINT 2.0 solution using docker containers that e
 - PostgreSQL 10.7
 - Debian 9.9 (stretch)
 
-## Deploy with Docker Compose
+### Docker Compose
 
 openmaint_docker was built and tested using the following:
 
 - Docker-Compose version 1.21.2, build a133471
 - Docker version 19.03.5, build 633a0ea838
 
-## Installation Instructions for Ubuntu 18.04 LTS
+# Installation Instructions for Ubuntu 18.04 LTS
 
 ### Update APT Repository 
 ```
