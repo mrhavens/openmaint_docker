@@ -1,14 +1,14 @@
 version: "2.4"
 volumes:
-    cmdbuild-db:
-    cmdbuild-tomcat:
+    openmaint-db:
+    openmaint-tomcat:
 
 services:
-    cmdbuild_db:
-        image: itmicus/cmdbuild:db-3.0
-        container_name: cmdbuild_db
+    openmaint_db:
+        image: itmicus/openmaint:db-3.0
+        container_name: openmaint_db
         volumes:
-            - cmdbuild-db:/var/lib/postgresql
+            - openmaint-db:/var/lib/postgresql
         ports:
             - 5432:5432
         environment:
@@ -18,25 +18,25 @@ services:
         mem_limit: 1000m
         mem_reservation: 300m
 
-    cmdbuild_app:
-        image: itmicus/cmdbuild:app-3.1.1
-        container_name: cmdbuild_app
+    openmaint_app:
+        image: itmicus/openmaint:app-3.1.1
+        container_name: openmaint_app
         links:
-           - cmdbuild_db
+           - openmaint_db
         depends_on:
-           - cmdbuild_db
+           - openmaint_db
         ports:
             - 8080:8080
         restart: on-failure    
         volumes:
-            - cmdbuild-tomcat:/usr/local/tomcat
+            - openmaint-tomcat:/usr/local/tomcat
         environment:
             - POSTGRES_USER=postgres
             - POSTGRES_PASS=postgres
             - POSTGRES_PORT=5432
-            - POSTGRES_HOST=cmdbuild_db
-            - POSTGRES_DB=cmdbuild_3
-            - CMDBUILD_DUMP=openmaint_demo.dump.xz
+            - POSTGRES_HOST=openmaint_db
+            - POSTGRES_DB=openmaint_3
+            - OPENMAINT_DUMP=openmaint_demo.dump.xz
             - JAVA_OPTS=-Xmx4000m -Xms2000m
         mem_limit: 4000m
         mem_reservation: 2000m

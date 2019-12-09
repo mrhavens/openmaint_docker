@@ -1,16 +1,16 @@
 FROM tomcat:8.5.42-jdk8-openjdk
 
-MAINTAINER LLC Itmicus <order@itmicus.ru>
+MAINTAINER Maven Shark LLC <mark.havens@mavenshark.com>
 
 WORKDIR $CATALINA_HOME
 
-ENV CMDBUILD_URL https://sourceforge.net/projects/cmdbuild/files/3.1.1/cmdbuild-3.1.1.war/download
+ENV OPENMAINT_URL https://sourceforge.net/projects/cmdbuild/files/3.1.1/cmdbuild-3.1.1.war/download
 ENV POSTGRES_USER postgres
 ENV POSTGRES_PASS postgres
 ENV POSTGRES_PORT 5432
-ENV POSTGRES_HOST cmdbuild_db
-ENV POSTGRES_DB cmdbuild_db3
-ENV CMDBUILD_DUMP demo
+ENV POSTGRES_HOST openmaint_db
+ENV POSTGRES_DB openmaint_db3
+ENV OPENMAINT_DUMP empty
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
@@ -18,12 +18,12 @@ RUN apt-get update \
 	postgresql-client
 
 RUN set -x \
- 	&& mkdir $CATALINA_HOME/conf/cmdbuild/ \
- 	&& mkdir $CATALINA_HOME/webapps/cmdbuild/
+ 	&& mkdir $CATALINA_HOME/conf/openmaint/ \
+ 	&& mkdir $CATALINA_HOME/webapps/openmaint/
 
 COPY files/tomcat-users.xml $CATALINA_HOME/conf/tomcat-users.xml
 COPY files/context.xml $CATALINA_HOME/webapps/manager/META-INF/context.xml
-COPY files/database.conf $CATALINA_HOME/conf/cmdbuild/database.conf
+COPY files/database.conf $CATALINA_HOME/conf/openmaint/database.conf
 COPY files/docker-entrypoint.sh /usr/local/bin/
 
 
@@ -31,13 +31,13 @@ RUN set -x \
 	&& groupadd tomcat \
 	&& useradd -s /bin/false -g tomcat -d $CATALINA_HOME tomcat \
 	&& cd /tmp \
-	&& wget -O cmdbuild.war "$CMDBUILD_URL" \
-	&& chmod 777 cmdbuild.war \
+	&& wget -O openmaint.war "$OPENMAINT_URL" \
+	&& chmod 777 openmaint.war \
 	&& chmod 777 /usr/local/bin/docker-entrypoint.sh \
-	&& unzip cmdbuild.war -d cmdbuild \
-	&& mv cmdbuild.war $CATALINA_HOME/webapps/cmdbuild.war \
-	&& mv cmdbuild/* $CATALINA_HOME/webapps/cmdbuild/ \
-	&& chmod 777 $CATALINA_HOME/webapps/cmdbuild/cmdbuild.sh \
+	&& unzip openmaint.war -d openmaint \
+	&& mv openmaint.war $CATALINA_HOME/webapps/openmaint.war \
+	&& mv openmaint/* $CATALINA_HOME/webapps/openmaint/ \
+	&& chmod 777 $CATALINA_HOME/webapps/openmaint/openmaint.sh \
 	&& chown tomcat -R $CATALINA_HOME \
 	&& cd /tmp \
 	&& rm -rf * \
