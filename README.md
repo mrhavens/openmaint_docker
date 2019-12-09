@@ -112,7 +112,7 @@ Tomcat Admin Password: password
 ```
 
 ### How do I change the Tomcat Admin Console password before deployment?
-This is the prefered method. You only need to edit the password in the Tomcat configuration file provided in in this distro ([openmaint/files/tomcat-users.xml](https://github.com/mrhavens/openmaint_docker/blob/master/openmaint/files/tomcat-users.xml)). However, it can only be changed prior to deployment.
+This is the prefered method. You only need to edit the password in the Tomcat configuration file provided in this distro ([openmaint/files/tomcat-users.xml](https://github.com/mrhavens/openmaint_docker/blob/master/openmaint/files/tomcat-users.xml)). However, it can only be changed prior to deployment.
 
 ### How do I change the Tomcat Admin Console password after deployment?
 Changing the Tomcat Admin Console password on a running system is somewhat more involved and requires editing the corresponding configuration file in Tomcat. Since Tomcat is inside a Docker container, this is done as follows:
