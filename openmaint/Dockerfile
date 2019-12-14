@@ -10,7 +10,7 @@ ENV POSTGRES_PASS postgres
 ENV POSTGRES_PORT 5432
 ENV POSTGRES_HOST openmaint_db
 ENV POSTGRES_DB openmaint_db3
-ENV OPENMAINT_DUMP empty
+ENV OPENMAINT_DUMP openmaint_empty
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \

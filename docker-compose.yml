@@ -36,7 +36,7 @@ services:
             - POSTGRES_PORT=5432
             - POSTGRES_HOST=openmaint_db
             - POSTGRES_DB=openmaint_3
-            - OPENMAINT_DUMP=openmaint_demo.dump.xz
+            - OPENMAINT_DUMP=openmaint_empty.dump.xz
             - JAVA_OPTS=-Xmx4000m -Xms2000m
         mem_limit: 4000m
         mem_reservation: 2000m
