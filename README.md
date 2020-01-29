@@ -1,7 +1,7 @@
 # openmaint_docker
 
 <div align="center">
-  <a href="https://www.cmdbuild.org/" target="_blank">www.cmdbuild.org>
+  <a href="https://www.cmdbuild.org/" target="_blank">
     <img alt="OPENMAINT" width="512" src="logo.png">
 </div>
 
