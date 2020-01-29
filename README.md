@@ -1,7 +1,7 @@
 # openmaint_docker
 
 <div align="center">
-	<img width="256" src="logo.png">
+	<img width="512" src="logo.png">
 </div>
 
 ### What is openMAINT?
