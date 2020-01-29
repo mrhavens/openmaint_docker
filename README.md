@@ -8,7 +8,7 @@
 
 ### TL;DR
 
-A hassle free Property & Facility Management solution for any system that runs Docker. 
+A hassle free openMAINT installation and configuration solution for any system that runs Docker. 
 
 ### What is openMAINT?
 
