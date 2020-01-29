@@ -1,9 +1,5 @@
 # openmaint_docker
 
-<div align="center">
-	<img width="512" src="logo.png">
-</div>
-
 ### What is openMAINT?
 
 openMAINT (https://www.openmaint.org/) is a web based Property & Facility Management application that is fully open source. It is used for managing fixed and transferable physical assets such as buildings and furniture, along with related maintenance.
