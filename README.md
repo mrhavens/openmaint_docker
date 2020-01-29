@@ -8,7 +8,7 @@
 
 ### TL;DR
 
-An uncomplicated and hassle free openMAINT installation solution for any system that can run Docker. 
+A hassle free openMAINT solution for any system that runs Docker. 
 
 ### What is openMAINT?
 
