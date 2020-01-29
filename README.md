@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://www.cmdbuild.org/" target="_blank">www.cmdbuild.org>
-    <img alt="OPENMAINT" width="512" src="logo.png"></a>
+    <img alt="OPENMAINT" width="512" src="logo.png">
 </div>
 
 ### What is openMAINT?
