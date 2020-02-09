@@ -16,7 +16,7 @@ A hassle free openMAINT installation and configuration solution for any system t
 
 ### What stack does this distro of openMAINT 2.0 use?
 
-This is a fully functional openMAINT 2.0 solution using docker containers that employs the following customized stack:
+This is a fully functional openMAINT 2.0 solution using Docker containers that employs the following customized stack:
 
 - CMDBuild 3.1.1 core
 - openMAINT 2.0 database dump
